@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Your page title here :)</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+<script src='//cdn.tinymce.com/4/tinymce.min.js'></script>
+  <script>
+  tinymce.init({
+    selector: '#PContent',
+    theme: 'modern',
+    width: 600,
+    height: 300,
+    plugins: [
+      'advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker',
+      'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
+      'save table contextmenu directionality emoticons template paste textcolor'
+    ],
+    content_css: 'css/content.css',
+    toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons'
+ 
+  });
+  </script>
+
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+
+</head>
+<body>
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+      <div class="one column" style="margin-top: 2%">
+
+
+      <?php
+
+include 'dor.php';
+            
+            if(! get_magic_quotes_gpc() ) {
+               $PTitle = addslashes ($_POST['PTitle']);
+               $PContent = addslashes ($_POST['PContent']);
+            }else {
+               $PTitle = $_POST['$PTitle'];
+               $PContent = $_POST['PContent'];
+            }
+            
+            $PType = $_POST['PType'];
+            $PDisplay = $_POST['PDisplay'];
+            $POrder = $_POST['POrder'];
+            
+            $sql = "INSERT INTO Pages ". "(PTitle,PContent,PType,PDisplay 
+            ,POrder,PDateCreate) ". "VALUES('$PTitle','$PContent',$PType,PDisplay,POrder, NOW())";
+               
+            mysql_select_db('Attila');
+            $retval = mysql_query( $sql, $conn );
+            
+            if(! $retval ) {
+               die('Could not enter data: ' . mysql_error());
+            }
+            
+            echo "Entered data successfully\n";
+            
+            mysql_close($conn);
+         }else {
+            ?>
+            
+
+         <form method = "post" action = "<?php $_PHP_SELF ?>">
+  <fieldset>
+    <legend>Create A Page</legend>
+    Title: <input type="text" name="PTitle"> Page Type: <select name="PType">
+  <option value="home">Home</option>  
+  <option value="event">Event</option>
+  <option value="vehicle">Vehicle</option>
+  <option value="testimonial">Testimonial</option>
+  <option value="special">Special</option>
+  <option value="about">About</option>
+  <option value="quote">Quote</option>
+</select> Page Order: <input type="text" name="POrder"> 
+  <textarea id="PContent">Hello, World!</textarea>  
+<br>
+    <select name="PDisplay">
+  <option value="False">Hide</option>  
+  <option value="True">Show</option>
+</select><input type="submit" value="Save">
+  </fieldset>
+</form>
+
+     <?php
+         }
+      ?>
+   
+      </div>
+    </div>
+  </div>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
