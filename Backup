@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Vertical navigation dots - fullPage.js</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage full-screen sliders navigation widh dots." />
+	<meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,sliders navigation, horizontal navigation,horizontal,navigation,dots" />
+	<meta name="Resource-type" content="Document" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="assets/jquery.fullPage.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/skeleton.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/normalize.css" />
+	
+	<style>
+
+	/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+	}
+	.intro p{
+		color: #fff;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+
+	/* Overwriting styles for the navigation dots (to place it where we want)
+	* --------------------------------------- */
+	.fp-slidesNav.bottom{
+		bottom: 25px;
+	}
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+
+	#section2 h1{
+		color: #333;
+	}
+#section0{
+
+background-image: url('imgs/bus12.JPG');
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+#header, #footer{
+		position:fixed;
+		height: 5%;
+		display:block;
+		width: 100%;
+		/*background: #333;*/
+		z-index:9;
+		text-align:center;
+		color: #f2f2f2;
+		padding: 0px 0 0 0;
+	}
+	#header{
+		top:0px;
+	}
+
+/* Remove margins and padding from the list, and add a black background color */
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Float the list items side by side */
+ul.topnav li {float: left;}
+
+/* Style the links inside the list items */
+ul.topnav li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.topnav li a:hover {background-color: #111;}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {display: none;}
+
+
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+	</style>
+
+	
+		<script type="text/javascript">
+			 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+    document.getElementsByClassName("topnav")[0].classList.toggle("responsive");
+}
+		</script>
+	
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="assets/jquery.slimscroll.min.js"></script>
+
+	<script type="text/javascript" src="assets/jquery.fullPage.js"></script>
+
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['firstPage', 'secondPage', '3rdPage'],
+				sectionsColor: ['none', '#DE564B', '#EAE1C0'],
+				slidesNavigation: true,
+			});
+		});
+	</script>
+
+</head>
+<body>
+<div id="header">
+
+<ul class="topnav">
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">Events</a></li>
+  <li><a href="#contact">Vehicles</a></li>
+  <li><a href="#about">Testimonials</a></li>
+<li><a href="#about">Specials</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#about">Quotes</a></li>
+  <li class="icon">
+    <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+  </li>
+</ul>
+
+
+
+</div>
+<div id="fullpage">
+
+	<div class="section " id="section0">
+		<div class="intro">
+			
+			<h1>Sliders navigation dots</h1>
+			<p>Create a navigation for your landscape sliders</p>
+		</div>
+	</div>
+	<div class="section" id="section1">
+	    <div class="slide" id="slide1" data-anchor="slide1">
+			<div class="intro">
+				<h1>Clickable</h1>
+				<p>
+					You can even click on the navigation and jump directly to another section.
+				</p>
+			</div>
+		</div>
+
+	    <div class="slide" id="slide2" data-anchor="slide2">
+			<h1>Slide 2</h1>
+		</div>
+
+		<div class="slide" id="slide3" data-anchor="slide3">
+			<h1>Slide 3</h1>
+		</div>	<div class="slide" id="slide3" data-anchor="slide3">
+			<h1>Slide 4</h1>
+		</div>
+		<div class="slide" id="slide3" data-anchor="slide3">
+			<h1>Slide 5</h1>
+		</div>
+	</div>
+	<div class="section" id="section2">
+		<div class="intro">
+			<h1>Enjoy it</h1>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>
