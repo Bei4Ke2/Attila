@@ -1,122 +1,128 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
-<head>
+<head> 
 
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Your page title here :)</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+<title>Exquisite Limousine Chicago</title> 
 
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="HandheldFriendly" content="True">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+<!-- Style Sheets --> 
+<link rel="stylesheet" type="text/css" media="all" href="assets/css/reset.css" />
+<link rel="stylesheet" type="text/css" media="all" href="assets/css/trunk.css" />
+<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:600' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="assets/jquery.fullPage.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/skeleton.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/normalize.css" />
 
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
-<script src='//cdn.tinymce.com/4/tinymce.min.js'></script>
-  <script>
-  tinymce.init({
-    selector: '#PContent',
-    theme: 'modern',
-    width: 600,
-    height: 300,
-    plugins: [
-      'advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker',
-      'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
-      'save table contextmenu directionality emoticons template paste textcolor'
-    ],
-    content_css: 'css/content.css',
-    toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons'
+<!-- Scripts --> 
+<script type="text/javascript">
+	if (typeof jQuery == 'undefined')
+		document.write(unescape("%3Cscript src='assets/js/jquery-1.9.js'" + 
+															"type='text/javascript'%3E%3C/script%3E"))
+</script>
+<script type="text/javascript" language="javascript" src="assets/js/trunk.js"></script>
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript" src="assets/jquery.slimscroll.min.js"></script>
+
+	<script type="text/javascript" src="assets/jquery.fullPage.js"></script>
+
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['firstPage', 'secondPage', '3rdPage'],
+				sectionsColor: ['none', '#DE564B', '#EAE1C0'],
+				slidesNavigation: true,
+			});
+		});
+	</script>
+
+</head> 
  
-  });
-  </script>
+<body> 
 
+<div class="container">
 
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+	<header class="slide">     <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+		<ul id="navToggle" class="burger slide">    <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+			<li></li><li></li><li></li>
+		</ul>
+		<h1>EXQUISITE LIMOUSINE</h1> Luxury Vehicles for up to 30 Passengers
+	</header>
+<div id="navHolder">
+	<nav class="slide">
+		<ul>
+			<li><a href="../trunk.html" class="active">HOME</a></li>
+			<li><a href="#">EVENTS</a></li>
+			<li><a href="#">VEHICLES</a></li>
+			<li><a href="#">TESTIMONIALS</a></li>
+			<li><a href="#">SPECIALS</a></li>
+			<li><a href="#">ABOUT US</a></li>
+			<li><a href="#">GET A QUOTE</a></li>
+		</ul>
+	</nav>
+</div>
+	<div class="content slide">     <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+		<div id="fullpage">
 
+	<div class="section " id="section0">
+		<div class="intro">
+			
+			<h1>Sliders navigation dots</h1>
+			<p>Create a navigation for your landscape sliders</p>
+		</div>
+	</div>
+	<div class="section" id="section1">
+	    <div class="slide" id="slide1" data-anchor="slide1">
+			<div class="intro">
+				<h1>Clickable</h1>
+				<p>
+					You can even click on the navigation and jump directly to another section.
+				</p>
+			</div>
+		</div>
 
-</head>
-<body>
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row">
-      <div class="one column" style="margin-top: 2%">
+	    <div class="slide" id="slide2" data-anchor="slide2">
+			<h1>Slide 2</h1>
+		</div>
 
+		<div class="slide" id="slide3" data-anchor="slide3">
+			<h1>Slide 3</h1>
+		</div>	<div class="slide" id="slide3" data-anchor="slide3">
+			<h1>Slide 4</h1>
+		</div>
+		<div class="slide" id="slide3" data-anchor="slide3">
+			<h1>Slide 5</h1>
+		</div>
+	</div>
+	<div class="section" id="section2">
+		<div class="intro">
+			<h1>Enjoy it</h1>
+		</div>
+	</div>
+</div>
 
-      <?php
-         if(isset($_POST['add'])) {
-         include 'dor.php';
-            
-            if(! get_magic_quotes_gpc() ) {
-               $PTitle = addslashes ($_POST['PTitle']);
-               $PContent = addslashes ($_POST['PContent']);
-            }else {
-               $PTitle = $_POST['$PTitle'];
-               $PContent = $_POST['PContent'];
-            }
-            
-            $PType = $_POST['PType'];
-            $PDisplay = $_POST['PDisplay'];
-            $POrder = $_POST['POrder'];
-            
-            $sql = "INSERT INTO Pages ". "(PTitle,PContent,PType,PDisplay 
-            ,POrder,PDateCreate) ". "VALUES('$PTitle','$PContent',$PType,PDisplay,POrder, NOW())";
-               
-            mysql_select_db('Attila');
-            $retval = mysql_query( $sql, $conn );
-            
-            if(! $retval ) {
-               die('Could not enter data: ' . mysql_error());
-            }
-            
-            echo "Entered data successfully\n";
-            
-            mysql_close($conn);
-         }else {
-            ?>
-            
+	</div>
+	
+</div>
 
-         <form method = "post" action = "<?php $_PHP_SELF ?>">
-  <fieldset>
-    <legend>Create A Page</legend>
-    Title: <input type="text" name="PTitle"> Page Type: <select name="PType">
-  <option value="home">Home</option>  
-  <option value="event">Event</option>
-  <option value="vehicle">Vehicle</option>
-  <option value="testimonial">Testimonial</option>
-  <option value="special">Special</option>
-  <option value="about">About</option>
-  <option value="quote">Quote</option>
-</select> Page Order: <input type="text" name="POrder"> 
-  <textarea id="PContent">Hello, World!</textarea>  
-<br>
-    <select name="PDisplay">
-  <option value="False">Hide</option>  
-  <option value="True">Show</option>
-</select><input type="submit" id="add" value="Save">
-  </fieldset>
-</form>
-
-     <?php
-         }
-      ?>
-   
-      </div>
-    </div>
-  </div>
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-</body>
+	
+</body> 
 </html>
+
+<!--Nav placeholder removed above-->
+
+
+
+
+
+
